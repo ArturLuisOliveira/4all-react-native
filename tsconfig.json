@@ -20,7 +20,8 @@
             "@hooks/*": ["src/utils/hooks/*"],
             "@helpers/*": ["src/utils/helpers/*"],
             "@stores/*": ["src/stores/*"],
-            "@styles/*": ["src/styles/*"]
+            "@styles/*": ["src/styles/*"],
+            "@api/*": ["src/services/api/*"]
         }
     }
 }
