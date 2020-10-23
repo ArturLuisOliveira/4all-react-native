@@ -5,10 +5,7 @@ interface Dispatch {
     payload: Payload;
 }
 
-export interface Payload {
-    taskList?: Task[];
-    task?: Task | null;
-}
+export type Payload = Task | null | Task[];
 
 export interface CommonStoreDTO {
     taskList: Task[];

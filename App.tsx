@@ -1,30 +1,26 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { ReactElement } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet } from 'react-native';
 
 import '@expo/match-media';
 
 import Provider from '@stores/Provider';
-import Initial from '@screens/initial/Initial';
-import Main from '@screens/main/Main';
+import Routes from './src/routes/Routes';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function App(): ReactElement {
     return (
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
             <Provider>
-                <Initial />
-                <Main />
+                <Routes />
             </Provider>
             <StatusBar style="auto" />
-        </View>
+        </SafeAreaView>
     );
 }
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center'
+        flex: 1
     }
 });

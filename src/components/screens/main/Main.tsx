@@ -1,12 +1,8 @@
 import React, { ReactElement } from 'react';
-import { View, Text } from 'react-native';
+import { Text } from 'react-native';
 
 function Main(): ReactElement {
-    return (
-        <View>
-            <Text>Main Screen</Text>
-        </View>
-    );
+    return <Text>Main Screen</Text>;
 }
 
 export default Main;

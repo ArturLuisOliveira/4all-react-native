@@ -8,7 +8,7 @@ import mockTask from './mocks/task.mock';
 class TaskApi {
     static async list(): Promise<Task[]> {
         /**
-         * The api will send an { lista: tasks } object.
+         * The api will send an { lista: [...ids] } object. So the app should fetch the given tasks.
          */
         const tasks: Task[] = Array(10)
             .fill(null)
