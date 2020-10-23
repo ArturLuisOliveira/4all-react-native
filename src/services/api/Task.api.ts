@@ -6,14 +6,17 @@ import mockTask from './mocks/task.mock';
  */
 
 class TaskApi {
-    static list(): Task[] {
+    static async list(): Promise<Task[]> {
+        /**
+         * The api will send an { lista: tasks } object.
+         */
         const tasks: Task[] = Array(10)
             .fill(null)
             .map(() => mockTask());
         return tasks;
     }
 
-    static find(id: string): Task {
+    static async find(id: string): Promise<Task> {
         const task: Task = mockTask({ id });
         return task;
     }
