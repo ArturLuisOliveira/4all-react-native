@@ -12,7 +12,9 @@ function ActionButton({ label, Icon, onTouch }: ActionButtonProps): ReactElement
     return (
         <Pressable style={styles.container} onPress={onTouch}>
             {Icon}
-            <Text style={styles.text}>{label}</Text>
+            <Text numberOfLines={1} style={styles.text}>
+                {label}
+            </Text>
         </Pressable>
     );
 }
