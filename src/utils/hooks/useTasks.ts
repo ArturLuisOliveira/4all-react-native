@@ -6,11 +6,11 @@ import { useContext, useEffect } from 'react';
 import * as screens from '@constants/screens';
 import Task from '@models/task';
 
-interface UseTasksDTO {
+interface UseTasks {
     openTask(task: Task): void;
 }
 
-const useTasks = (): UseTasksDTO => {
+const useTasks = (): UseTasks => {
     const { dispatch } = useContext(context);
     const navigation = useNavigation();
 

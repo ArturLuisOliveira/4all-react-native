@@ -4,12 +4,15 @@ import { View } from 'react-native';
 import styles from './styles';
 import { FontAwesome } from '@expo/vector-icons';
 import { PRIMARY_COLOR } from '@styles/theme';
+import useCall from '@hooks/useCall';
 
 function TaskButtonGroup(): ReactElement {
+    const call = useCall();
+
     return (
         <View style={styles.container}>
             <ActionButton
-                onTouch={() => console.log('Ligar')}
+                onTouch={() => call()}
                 label={'Ligar'}
                 Icon={<FontAwesome name="phone" size={32} color={PRIMARY_COLOR} />}
             />
