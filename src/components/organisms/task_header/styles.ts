@@ -1,11 +1,13 @@
+import { PRIMARY_COLOR } from '@styles/theme';
 import { StyleSheet } from 'react-native';
 import { Dimensions } from 'react-native';
 
 const windowHeight = Dimensions.get('window').height;
 
 const styles = StyleSheet.create({
+    container: { marginBottom: 18 },
     image: { width: '100%', height: (windowHeight * 40) / 100 },
-    title: { textTransform: 'uppercase', color: 'orange', fontSize: 20 },
+    title: { marginTop: 10, textTransform: 'uppercase', color: PRIMARY_COLOR, fontSize: 20 },
     iconContainer: {
         display: 'flex',
         justifyContent: 'center',

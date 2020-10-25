@@ -1,7 +1,7 @@
+import React, { ReactElement } from 'react';
 import TaskHeader from '@organisms/task_header';
 import CommentList from '@organisms/comment_list';
-import TaskButtonGroup from '@organisms/task_button_group';
-import React, { ReactElement } from 'react';
+import TaskInfo from '@organisms/task_info';
 import { ScrollView } from 'react-native';
 import styles from './styles';
 import TaskLocation from '@organisms/task_location';
@@ -10,7 +10,8 @@ function Main(): ReactElement {
     return (
         <ScrollView style={styles.container}>
             <TaskHeader />
-            <TaskButtonGroup />
+            <TaskInfo />
+
             <TaskLocation />
             <CommentList />
         </ScrollView>

@@ -28,7 +28,7 @@ const task = (data: TaskMockDTO = {}): Task =>
         latitude: '-30.058625',
         longitude: '-51.173358',
         telefone: faker.phone.phoneNumber(),
-        texto: faker.lorem.sentence(),
+        texto: faker.lorem.sentence(20),
         titulo: faker.lorem.words(3),
         urlFoto: faker.image.city(),
         urlLogo: faker.image.image(),

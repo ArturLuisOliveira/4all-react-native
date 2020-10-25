@@ -1,3 +1,4 @@
+import { PRIMARY_COLOR } from '@styles/theme';
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -6,7 +7,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'flex-end',
         alignItems: 'flex-end',
-        backgroundColor: 'orange',
+        backgroundColor: PRIMARY_COLOR,
         height: 20,
         paddingRight: 5,
         paddingBottom: 1

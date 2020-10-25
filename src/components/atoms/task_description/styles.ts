@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
-
+import { PRIMARY_COLOR } from '@styles/theme';
 const styles = StyleSheet.create({
-    container: { flex: 1, flexDirection: 'row', marginBottom: 10 }
+    text: { color: PRIMARY_COLOR }
 });
 
 export default styles;

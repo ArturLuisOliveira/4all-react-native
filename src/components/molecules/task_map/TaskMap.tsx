@@ -19,7 +19,7 @@ function TaskMap(): ReactElement {
     );
 
     return (
-        <View style={styles.container}>
+        <View style={styles.container} pointerEvents="none">
             <MapView
                 style={styles.mapStyle}
                 initialRegion={{

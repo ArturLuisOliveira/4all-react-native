@@ -4,12 +4,13 @@ import { context } from '@stores/common';
 import { FontAwesome } from '@expo/vector-icons';
 
 import styles from './styles';
+import { PRIMARY_COLOR } from '@styles/theme';
 
 function CommentHeader(): ReactElement {
     const { task } = useContext(context);
 
     return (
-        <View>
+        <View style={styles.container}>
             <Image
                 source={{
                     uri: task?.urlFoto
@@ -19,7 +20,7 @@ function CommentHeader(): ReactElement {
             <View style={styles.sectionContainer}>
                 <Text style={styles.title}>{task?.titulo}</Text>
                 <View style={styles.iconContainer}>
-                    <FontAwesome name="star" size={40} color="orange" />
+                    <FontAwesome name="star" size={40} color={PRIMARY_COLOR} />
                 </View>
             </View>
         </View>
