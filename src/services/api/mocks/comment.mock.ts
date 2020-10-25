@@ -11,8 +11,8 @@ interface CommentMockDTO {
 const comment = (data: CommentMockDTO = {}): Comment =>
     new Comment({
         comentario: faker.lorem.sentence(),
-        nome: faker.name.firstName() + faker.name.lastName(),
-        nota: faker.random.number({ max: 10, min: 0 }),
+        nome: faker.name.firstName() + ' ' + faker.name.lastName(),
+        nota: faker.random.number({ max: 5, min: 0 }),
         titulo: faker.lorem.words(2),
         urlFoto: faker.image.avatar(),
         ...data
