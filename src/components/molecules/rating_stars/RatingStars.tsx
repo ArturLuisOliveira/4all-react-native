@@ -15,13 +15,13 @@ function RatingStars({ note = 0 }: RatingStarsProps): ReactElement {
         <View style={styles.container}>
             {Array(stars.marked)
                 .fill(null)
-                .map(() => (
-                    <FontAwesome name="star" size={20} color="orange" />
+                .map((value, index) => (
+                    <FontAwesome key={`marked-star-${index}`} name="star" size={20} color="orange" />
                 ))}
             {Array(stars.unmarked)
                 .fill(null)
-                .map(() => (
-                    <FontAwesome name="star" size={20} color="grey" />
+                .map((value, index) => (
+                    <FontAwesome key={`unmarked-star-${index}`} name="star" size={20} color="grey" />
                 ))}
         </View>
     );
