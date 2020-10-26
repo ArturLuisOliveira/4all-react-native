@@ -7,7 +7,7 @@ interface Dispatch {
     payload: Payload;
 }
 
-export type Payload = Task | null | Task[] | boolean | MutableRefObject<ScrollView> | number;
+export type Payload = Task | null | Task[] | boolean | MutableRefObject<ScrollView | null> | number;
 
 export interface CommonStoreDTO {
     taskList: Task[];

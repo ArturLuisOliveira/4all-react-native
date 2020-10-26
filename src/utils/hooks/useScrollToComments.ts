@@ -3,7 +3,7 @@ import { context, actions } from '@stores/common';
 import { MutableRefObject, useContext } from 'react';
 
 interface UseScrollIntoComments {
-    setScrollRef(ref: MutableRefObject<ScrollView | null>): void;
+    setScrollRef(ref: ScrollView): void;
     scrollIntoComments(): void;
     setCommentsY(yPosition: number): void;
 }
@@ -15,7 +15,6 @@ const useScrollToComments = (): UseScrollIntoComments => {
     };
 
     const scrollIntoComments = () => {
-        console.log('commentsYPosition', commentsYPosition);
         if (scrollRef) scrollRef.current.scrollTo({ x: 0, y: commentsYPosition, animated: false });
     };
 

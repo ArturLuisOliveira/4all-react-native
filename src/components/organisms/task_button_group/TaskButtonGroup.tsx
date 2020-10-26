@@ -7,11 +7,13 @@ import { PRIMARY_COLOR } from '@styles/theme';
 import useCall from '@hooks/useCall';
 import useAddressModal from '@hooks/useAddressModal';
 import useScrollToComments from '@hooks/useScrollToComments';
+import useServicesScreen from '@hooks/useServicesScreen';
 
 function TaskButtonGroup(): ReactElement {
     const call = useCall();
     const { openAddress } = useAddressModal();
     const { scrollIntoComments } = useScrollToComments();
+    const navigateToServices = useServicesScreen();
 
     return (
         <View style={styles.container}>
@@ -21,7 +23,7 @@ function TaskButtonGroup(): ReactElement {
                 Icon={<FontAwesome name="phone" size={32} color={PRIMARY_COLOR} />}
             />
             <ActionButton
-                onTouch={() => console.log('Serviços')}
+                onTouch={() => navigateToServices()}
                 label={'Serviços'}
                 Icon={<FontAwesome name="diamond" size={32} color={PRIMARY_COLOR} />}
             />
