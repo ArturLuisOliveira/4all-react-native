@@ -16,7 +16,7 @@ function Routes(): ReactElement {
     return (
         <NavigationContainer>
             <Stack.Navigator initialRouteName={screens.INITIAL}>
-                <Stack.Screen name={screens.INITIAL} component={Initial} />
+                <Stack.Screen options={{ headerShown: false }} name={screens.INITIAL} component={Initial} />
                 <Stack.Screen
                     options={{
                         headerStyle: {
