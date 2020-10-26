@@ -4,8 +4,8 @@ import { View } from 'react-native';
 import { context } from '@stores/common';
 import CommentElement from '@molecules/comment_element';
 import Comment from '@models/comment';
-import styles from './styles';
 import useScrollToComments from '@hooks/useScrollToComments';
+import styles from './styles';
 
 function CommentList(): ReactElement {
     const { task } = useContext(context);

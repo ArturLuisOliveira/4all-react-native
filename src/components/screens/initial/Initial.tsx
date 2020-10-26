@@ -1,10 +1,10 @@
-import Divider from '@atoms/divider';
-import useTaskList from '@hooks/useTasks';
-import { context } from '@stores/common';
 import React, { ReactElement, useContext } from 'react';
 import { FlatList, Text, View, Image } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
+import Divider from '@atoms/divider';
+import useTaskList from '@hooks/useTasks';
+import { context } from '@stores/common';
 import styles from './styles';
 
 function Initial(): ReactElement {

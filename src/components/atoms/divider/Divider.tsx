@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react';
 import { View } from 'react-native';
+
 import styles from './styles';
 
 function Divider(): ReactElement {

@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react';
 import { Text, Pressable } from 'react-native';
+
 import styles from './styles';
 
 interface ActionButtonProps {

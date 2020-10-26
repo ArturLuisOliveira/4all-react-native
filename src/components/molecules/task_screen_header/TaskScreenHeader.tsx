@@ -2,6 +2,7 @@ import React, { ReactElement, useContext } from 'react';
 import { Text, View } from 'react-native';
 import { context } from '@stores/common';
 import { FontAwesome } from '@expo/vector-icons';
+
 import styles from './styles';
 
 function TaskScreenHeader(): ReactElement {

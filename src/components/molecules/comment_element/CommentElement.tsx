@@ -1,7 +1,8 @@
-import Comment from '@models/comment';
-import RatingStars from '@molecules/rating_stars';
 import React, { ReactElement } from 'react';
 import { Text, View, Image } from 'react-native';
+
+import Comment from '@models/comment';
+import RatingStars from '@molecules/rating_stars';
 import styles from './styles';
 
 interface CommentProps {

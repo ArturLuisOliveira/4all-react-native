@@ -1,13 +1,14 @@
 import ActionButton from '@molecules/action_button';
 import React, { ReactElement } from 'react';
 import { View } from 'react-native';
-import styles from './styles';
 import { FontAwesome } from '@expo/vector-icons';
+
 import { PRIMARY_COLOR } from '@styles/theme';
 import useCall from '@hooks/useCall';
 import useAddressModal from '@hooks/useAddressModal';
 import useScrollToComments from '@hooks/useScrollToComments';
 import useServicesScreen from '@hooks/useServicesScreen';
+import styles from './styles';
 
 function TaskButtonGroup(): ReactElement {
     const call = useCall();

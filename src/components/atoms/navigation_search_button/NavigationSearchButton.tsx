@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
 import { View } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
+
 import styles from './styles';
 
 function NavigationSearchButton(): ReactElement {
