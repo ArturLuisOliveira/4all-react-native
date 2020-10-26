@@ -5,8 +5,9 @@ import { StyleSheet } from 'react-native';
 import '@expo/match-media';
 
 import Provider from '@stores/Provider';
-import Routes from './src/routes/Routes';
+import Routes from './src/routes';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { PRIMARY_COLOR } from '@styles/theme';
 
 export default function App(): ReactElement {
     return (
@@ -14,7 +15,7 @@ export default function App(): ReactElement {
             <Provider>
                 <Routes />
             </Provider>
-            <StatusBar style="auto" />
+            <StatusBar style="auto" backgroundColor={PRIMARY_COLOR} />
         </SafeAreaView>
     );
 }

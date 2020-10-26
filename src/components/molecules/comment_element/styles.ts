@@ -1,3 +1,4 @@
+import { PRIMARY_COLOR } from '@styles/theme';
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -17,7 +18,9 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between'
-    }
+    },
+    text: { color: PRIMARY_COLOR },
+    name: { fontWeight: 'bold' }
 });
 
 export default styles;

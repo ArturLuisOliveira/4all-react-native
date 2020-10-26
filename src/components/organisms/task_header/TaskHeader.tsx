@@ -18,7 +18,9 @@ function CommentHeader(): ReactElement {
                 style={styles.image}
             />
             <View style={styles.sectionContainer}>
-                <Text style={styles.title}>{task?.titulo}</Text>
+                <Text numberOfLines={1} style={styles.title}>
+                    {task?.titulo}
+                </Text>
                 <View style={styles.iconContainer}>
                     <FontAwesome name="star" size={40} color={PRIMARY_COLOR} />
                 </View>

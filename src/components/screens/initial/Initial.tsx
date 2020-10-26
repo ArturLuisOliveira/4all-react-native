@@ -1,7 +1,8 @@
+import Divider from '@atoms/divider';
 import useTaskList from '@hooks/useTasks';
 import { context } from '@stores/common';
 import React, { ReactElement, useContext } from 'react';
-import { FlatList, Text, View } from 'react-native';
+import { FlatList, Text, View, Image } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 import styles from './styles';
@@ -15,12 +16,17 @@ function Initial(): ReactElement {
                 style={styles.container}
                 data={taskList}
                 renderItem={({ item: task }) => (
-                    <View>
+                    <>
                         <TouchableOpacity onPress={() => openTask(task)}>
-                            <Text>{task.titulo}</Text>
-                            <Text>{task.id}</Text>
+                            <View style={styles.element}>
+                                <View style={styles.avatarContainer}>
+                                    <Image source={{ uri: task.urlLogo }} style={styles.avatar} />
+                                </View>
+                                <Text style={styles.text}>{task.titulo}</Text>
+                            </View>
                         </TouchableOpacity>
-                    </View>
+                        <Divider />
+                    </>
                 )}
             />
         </>

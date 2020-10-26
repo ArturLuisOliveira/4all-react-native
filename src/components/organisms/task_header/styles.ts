@@ -7,9 +7,9 @@ const windowHeight = Dimensions.get('window').height;
 const styles = StyleSheet.create({
     container: { marginBottom: 18 },
     image: { width: '100%', height: (windowHeight * 40) / 100 },
-    title: { marginTop: 10, textTransform: 'uppercase', color: PRIMARY_COLOR, fontSize: 20 },
+    title: { flex: 5, marginTop: 10, textTransform: 'uppercase', color: PRIMARY_COLOR, fontSize: 20 },
     iconContainer: {
-        display: 'flex',
+        flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 30,

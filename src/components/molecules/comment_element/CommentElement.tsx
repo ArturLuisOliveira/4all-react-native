@@ -17,13 +17,13 @@ function CommentElement({ comment }: CommentProps): ReactElement {
             <View style={styles.textContainer}>
                 <View style={styles.header}>
                     <View>
-                        <Text>{comment.nome}</Text>
-                        <Text>{comment.titulo}</Text>
+                        <Text style={{ ...styles.text, ...styles.name }}>{comment.nome}</Text>
+                        <Text style={styles.text}>{comment.titulo}</Text>
                     </View>
                     <RatingStars note={comment.nota} />
                 </View>
 
-                <Text>{comment.comentario}</Text>
+                <Text style={styles.text}>{comment.comentario}</Text>
             </View>
         </View>
     );
