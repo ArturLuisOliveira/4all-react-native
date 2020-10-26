@@ -13,6 +13,8 @@ const reducer = (state: CommonStoreDTO, action: ActionDTO): CommonStoreDTO => {
             return { ...state, taskList: action.payload as Task[] };
         case actions.SET_TASK:
             return { ...state, task: action.payload as Task };
+        case actions.SET_IS_ADDRESS_MODAL_OPEN:
+            return { ...state, isAddressModalOpen: action.payload as boolean };
         default:
             return state;
     }

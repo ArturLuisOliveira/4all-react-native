@@ -5,9 +5,11 @@ import styles from './styles';
 import { FontAwesome } from '@expo/vector-icons';
 import { PRIMARY_COLOR } from '@styles/theme';
 import useCall from '@hooks/useCall';
+import useAddressModal from '@hooks/useAddressModal';
 
 function TaskButtonGroup(): ReactElement {
     const call = useCall();
+    const { openAddress } = useAddressModal();
 
     return (
         <View style={styles.container}>
@@ -19,14 +21,10 @@ function TaskButtonGroup(): ReactElement {
             <ActionButton
                 onTouch={() => console.log('Serviços')}
                 label={'Serviços'}
-                Icon={
-                    <>
-                        <FontAwesome name="diamond" size={32} color={PRIMARY_COLOR} />
-                    </>
-                }
+                Icon={<FontAwesome name="diamond" size={32} color={PRIMARY_COLOR} />}
             />
             <ActionButton
-                onTouch={() => console.log('Endereços')}
+                onTouch={() => openAddress()}
                 label={'Endereços'}
                 Icon={<FontAwesome name="map-marker" size={32} color={PRIMARY_COLOR} />}
             />

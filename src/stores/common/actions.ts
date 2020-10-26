@@ -1,2 +1,3 @@
 export const SET_TASK_LIST = 'SET_TASK_LIST';
 export const SET_TASK = 'SET_TASK';
+export const SET_IS_ADDRESS_MODAL_OPEN = 'SET_IS_ADDRESS_MODAL_OPEN';
