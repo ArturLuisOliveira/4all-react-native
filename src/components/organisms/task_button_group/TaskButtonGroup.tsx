@@ -6,10 +6,12 @@ import { FontAwesome } from '@expo/vector-icons';
 import { PRIMARY_COLOR } from '@styles/theme';
 import useCall from '@hooks/useCall';
 import useAddressModal from '@hooks/useAddressModal';
+import useScrollToComments from '@hooks/useScrollToComments';
 
 function TaskButtonGroup(): ReactElement {
     const call = useCall();
     const { openAddress } = useAddressModal();
+    const { scrollIntoComments } = useScrollToComments();
 
     return (
         <View style={styles.container}>
@@ -29,7 +31,7 @@ function TaskButtonGroup(): ReactElement {
                 Icon={<FontAwesome name="map-marker" size={32} color={PRIMARY_COLOR} />}
             />
             <ActionButton
-                onTouch={() => console.log('Comentários')}
+                onTouch={() => scrollIntoComments()}
                 label={'Comentários'}
                 Icon={<FontAwesome name="comments" size={32} color={PRIMARY_COLOR} />}
             />
